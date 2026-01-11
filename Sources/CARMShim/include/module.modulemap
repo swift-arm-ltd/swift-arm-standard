@@ -1,0 +1,4 @@
+module CARMShim {
+    header "shim.h"
+    export *
+}
