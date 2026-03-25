@@ -9,7 +9,7 @@
 //
 // ===----------------------------------------------------------------------===//
 
-internal import CARMShim
+public import CARMShim
 
 extension CPU.ARM.Timestamp {
     /// Timestamp read operation accessor.
