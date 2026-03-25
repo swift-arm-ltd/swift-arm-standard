@@ -34,7 +34,7 @@ extension CPU.ARM.Event.Wait {
     /// - An exclusive access clearing
     ///
     /// ARM-unique. No-op on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public func callAsFunction() {
         swift_arm_event_wait_v1()
     }
@@ -46,7 +46,7 @@ extension CPU.ARM.Event.Wait {
     /// used in idle loops.
     ///
     /// ARM-unique. No-op on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public func interrupt() {
         swift_arm_event_wait_interrupt_v1()
     }

@@ -30,7 +30,7 @@ extension CPU.ARM.Timestamp.Read {
     /// hardware level.
     ///
     /// ARM-unique. Returns 0 on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public func physical() -> CPU.Timestamp {
         .init(swift_arm_timestamp_physical_v1())
     }

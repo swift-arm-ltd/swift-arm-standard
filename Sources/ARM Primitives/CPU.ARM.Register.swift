@@ -26,7 +26,7 @@ extension CPU.ARM.Register {
     /// (e.g., 24MHz on Apple Silicon).
     ///
     /// ARM-unique. Returns 0 on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public static func frequency() -> CPU.ARM.Counter.Frequency {
         .init(swift_arm_register_read_v1(System.frequency.rawValue))
     }
@@ -37,7 +37,7 @@ extension CPU.ARM.Register {
     /// this is not affected by hypervisor offsets.
     ///
     /// ARM-unique. Returns 0 on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public static func physical() -> CPU.ARM.Counter.Value {
         .init(swift_arm_register_read_v1(System.physical.rawValue))
     }
@@ -48,7 +48,7 @@ extension CPU.ARM.Register {
     /// applied by the hypervisor.
     ///
     /// ARM-unique. Returns 0 on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public static func virtual() -> CPU.ARM.Counter.Value {
         .init(swift_arm_register_read_v1(System.virtual.rawValue))
     }

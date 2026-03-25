@@ -26,7 +26,7 @@ extension CPU.ARM.Event.Send {
     /// in WFE will be woken up.
     ///
     /// ARM-unique. No-op on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public func callAsFunction() {
         swift_arm_event_send_v1()
     }
@@ -41,7 +41,7 @@ extension CPU.ARM.Event.Send {
     ///
     /// ARM-unique (ARMv8+). Falls back to SEV on ARM32.
     /// No-op on non-ARM platforms.
-    @inline(__always)
+    @inline(always)
     public func local() {
         swift_arm_event_send_local_v1()
     }
