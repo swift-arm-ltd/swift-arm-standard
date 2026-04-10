@@ -13,8 +13,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ARM Primitives",
-            targets: ["ARM Primitives"]
+            name: "ARM Standard",
+            targets: ["ARM Standard"]
         )
     ],
     dependencies: [
@@ -26,7 +26,7 @@ let package = Package(
             dependencies: []
         ),
         .target(
-            name: "ARM Primitives",
+            name: "ARM Standard",
             dependencies: [
                 .target(name: "CARMShim"),
                 .product(name: "CPU Primitives", package: "swift-cpu-primitives")
