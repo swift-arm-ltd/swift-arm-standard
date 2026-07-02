@@ -1,6 +1,6 @@
 # .github/metadata.yaml
 # Triaged by AI-assisted bulk pass (2026-04-29).
-description: "Swift implementation of the ARM architecture reference."
+description: "ARM/ARM64 ISA-unique CPU primitives for Swift: system-register timers (CNTFRQ_EL0/CNTPCT_EL0/CNTVCT_EL0), WFE/SEV event wait/signal, and reserved NEON/SVE vector and crypto namespaces."
 topics:
   - standards
   - arm
