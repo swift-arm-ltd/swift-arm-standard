@@ -31,11 +31,15 @@ extension CPU.ARM.Counter {
         public init(integerLiteral value: UInt64) {
             self.rawValue = value
         }
+    }
+}
 
-        @inlinable
-        public static func < (lhs: Self, rhs: Self) -> Bool {
-            lhs.rawValue < rhs.rawValue
-        }
+extension CPU.ARM.Counter.Frequency {
+    @inlinable
+    public static func < (lhs: Self, rhs: Self) -> Bool {
+        // swift-linter:disable:next raw value access
+        // REASON: same-package Comparable witness on the brand-newtype's own boundary.
+        lhs.rawValue < rhs.rawValue
     }
 }
 
