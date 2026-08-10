@@ -22,13 +22,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "CARMShim",
+            name: "ARM Shims",
             dependencies: []
         ),
         .target(
             name: "ARM Standard",
             dependencies: [
-                .target(name: "CARMShim"),
+                .target(name: "ARM Shims"),
                 .product(name: "CPU Primitives", package: "swift-cpu-primitives")
             ]
         )

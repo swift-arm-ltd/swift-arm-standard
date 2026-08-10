@@ -1,4 +1,4 @@
-module CARMShim {
+module ARM_Shims {
     header "shim.h"
     export *
 }

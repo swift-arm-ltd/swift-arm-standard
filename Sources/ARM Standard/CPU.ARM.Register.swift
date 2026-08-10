@@ -9,7 +9,7 @@
 //
 // ===----------------------------------------------------------------------===//
 
-public import CARMShim
+public import ARM_Shims
 
 extension CPU.ARM {
     /// System register operations via MRS instruction.
