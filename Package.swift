@@ -9,7 +9,7 @@ let package = Package(
         .iOS(.v26),
         .tvOS(.v26),
         .watchOS(.v26),
-        .visionOS(.v26)
+        .visionOS(.v26),
     ],
     products: [
         .library(
@@ -18,7 +18,10 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-primitives/swift-cpu-primitives.git", branch: "main")
+        .package(
+            url: "https://github.com/swift-primitives/swift-cpu-primitives.git",
+            branch: "main"
+        )
     ],
     targets: [
         .target(
@@ -29,9 +32,15 @@ let package = Package(
             name: "ARM Standard",
             dependencies: [
                 .target(name: "ARM Shims"),
-                .product(name: "CPU Primitives", package: "swift-cpu-primitives")
+                .product(name: "CPU Primitives", package: "swift-cpu-primitives"),
             ]
-        )
+        ),
+        .testTarget(
+            name: "ARM Standard Tests",
+            dependencies: [
+                "ARM Standard"
+            ]
+        ),
     ],
     swiftLanguageModes: [.v6]
 )
