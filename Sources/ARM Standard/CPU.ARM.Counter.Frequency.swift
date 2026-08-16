@@ -14,7 +14,9 @@ extension CPU.ARM.Counter {
     ///
     /// Read from CNTFRQ_EL0 system register. Used to convert
     /// counter ticks to wall-clock time.
-    public struct Frequency: Sendable, Hashable, RawRepresentable, Comparable, ExpressibleByIntegerLiteral {
+    public struct Frequency: Sendable, Hashable, RawRepresentable, Comparable,
+        ExpressibleByIntegerLiteral
+    {
         public var rawValue: UInt64
 
         @inlinable
