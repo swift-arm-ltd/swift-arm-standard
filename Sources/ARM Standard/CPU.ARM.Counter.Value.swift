@@ -1,3 +1,5 @@
+public import Binary
+
 extension CPU.ARM.Counter {
 
     public struct Value: Sendable, Hashable, RawRepresentable, ExpressibleByIntegerLiteral {
